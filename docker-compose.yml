@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build: .  # This tells Docker Compose to build the image using the Dockerfile in the current directory
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html/
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: pathbuilder
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: MYSQL_PASSWORD
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  mysql_data:  # Named volume for MySQL data
+
+networks:
+  app-network:  # Define the custom network
