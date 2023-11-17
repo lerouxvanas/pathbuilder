@@ -1,19 +1,20 @@
-RewriteEngine On
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
 
 # If the request path ends with a / (indicating a directory), redirect to index.php
 #RewriteRule ^.*\/$ /public/index.php [L,NC,R=302]
-
 
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule ^(.*)$ /public/index.php [L]
 
+#</IfModule>
 
 <IfModule mod_rewrite.c>
     Options -Multiviews
     RewriteEngine On
-    RewriteBase /public/
+    RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ /public/index.php?url=$1 [QSA,L]
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 </IfModule>

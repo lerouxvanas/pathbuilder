@@ -1,6 +1,8 @@
 {
     "require": {
         "webonyx/graphql-php": "^15.7",
-        "lcobucci/jwt": "^5.0"
+        "lcobucci/jwt": "^5.0",
+        "firebase/php-jwt": "^6.9",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

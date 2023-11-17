@@ -1,2 +1,4 @@
 mysql/
 src/vendor
+.env
+.DS_Store

@@ -2,5 +2,6 @@
     "php.validate.enable": false,
     "docker-linter.php.enable": true,
     "docker-linter.php.container": "php-dev-web-1",
-    "docker-linter.php.machine": ""
+    "docker-linter.php.machine": "",
+    "intelephense.format.braces": "k&r"
 }
