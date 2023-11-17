@@ -10,6 +10,7 @@ class Controller {
         if(file_exists(__DIR__ . '/../views/' . $view . '.php')) { 
             require_once __DIR__ . '/../views/inc/header.php';
             require_once __DIR__ . '/../views/' . $view . '.php';
+            require_once __DIR__ . '/../views/inc/offcanvas.php';
             require_once __DIR__ . '/../views/inc/footer.php';
         } else {
             die('View does not exist');

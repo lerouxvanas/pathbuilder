@@ -1,7 +1,7 @@
 <h1>home</h1>
-<?php
 
-    echo $data['title'].'<hr />';
+
+<?php
 
     foreach ($data['users'] as $user) {
         echo $user->first_name . " " . $user->last_name . "<br />";
@@ -77,3 +77,16 @@
     */
 ?>
 
+<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href 
+  <?php Icon::user(); ?>
+</svg>
+</a>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target <?php Icon::settings(); ?>
+</button>
+
+
+
+  </div>
+</div>

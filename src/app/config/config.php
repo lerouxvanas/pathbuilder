@@ -1,6 +1,8 @@
 <?php
 define('APPROOT', dirname(dirname(__FILE__)));
 define('URLROOT', 'http://localhost');
+define('IMGROOT', URLROOT.'/public/assets/img');
+
 define('SITENAME', 'Path Builder v0.1');
 define('ROOT', dirname(dirname(dirname(__FILE__))));
 
